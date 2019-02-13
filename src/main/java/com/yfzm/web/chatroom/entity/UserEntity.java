@@ -13,6 +13,8 @@ public class UserEntity {
 
     private String password;
 
+    private Boolean admin;
+
     @Id
     @Column(name = "user_id", nullable = false)
     public String getUsername() {
@@ -30,5 +32,14 @@ public class UserEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Column(name = "admin", nullable = false)
+    public Boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
     }
 }
